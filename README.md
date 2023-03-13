@@ -16,7 +16,7 @@
 ### D - Dependency Inversion Principle: high-level modules should not depend on low-level modules. Both should depend on abstractions.
 
 ## Description :
-For this task I decided to create a simple calculator app that will follow all those principles and will be easy to implement. For an OOP language I picked Python cause is a short codding language in comparasion with Java for ex. and relative easy to learn
+For this task I decided to create a simple calculator app that will follow all those principles and will be easy to implement. For an OOP language I picked Python cause is a short codding language in comparasion with Java for ex. and relative easy to learn.
 
 ### SRP: The Calculator class has a single responsibility of performing mathematical operations.
 ```
