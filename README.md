@@ -19,12 +19,13 @@
 For this task I decided to create a simple calculator app that will follow all those principles and will be easy to implement. For an OOP language I picked Python cause is a short codding language in comparasion with Java for ex. and relative easy to learn
 
 ### SRP: The Calculator class has a single responsibility of performing mathematical operations.
-
+`
 class Calculator:
     def __init__(self, operation):
         self.operation = operation
     def calculate(self, x, y):
         return self.operation.operate(x, y)
+        `
         
 ### OCP: The mathematical operations are implemented as separate classes that implement the same interface, which allows for easy extension.
 ### LSP: The mathematical operations are substitutable for each other, as they all implement the same interface and follow the same contract.
@@ -57,8 +58,8 @@ class ConsoleResultDisplayer(ResultDisplayer):
         print("The result is:", result)
         `
 ### DIP: The Calculator class depends on abstractions (Operation interface) rather than concrete implementations, which makes it more flexible and reusable.
-`
-if __name__ == "__main__":
+
+`if __name__ == "__main__":
     operationCode = int(input("Choose the operation 1 - Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division : "))
     if operationCode == 1:
         operation = Addition()
@@ -76,5 +77,5 @@ if __name__ == "__main__":
     resultDisplayer = ConsoleResultDisplayer()
     operands = inputHandler.getOperands()
     result = calculator.calculate(operands[0], operands[1])
-    resultDisplayer.displayResult(result)
-`
+    resultDisplayer.displayResult(result)`
+
