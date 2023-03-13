@@ -30,17 +30,17 @@ class Calculator:
         
 ### OCP: The mathematical operations are implemented as separate classes that implement the same interface, which allows for easy extension.
 ### LSP: The mathematical operations are substitutable for each other, as they all implement the same interface and follow the same contract.
-`
+```
 class Operation:
     def operate(self, x, y):
         pass
 class Addition(Operation):
     def operate(self, x, y):
         return x + y
-        `
+```
 ### ISP: The InputHandler and ResultDisplayer interfaces only expose the necessary methods for each operation to function correctly.
-
-`class InputHandler:
+```
+class InputHandler:
     def getOperands(self):
         pass
 
@@ -56,11 +56,11 @@ class ResultDisplayer:
 
 class ConsoleResultDisplayer(ResultDisplayer):
     def displayResult(self, result):
-        print("The result is:", result)`
-        
+        print("The result is:", result)
+```
 ### DIP: The Calculator class depends on abstractions (Operation interface) rather than concrete implementations, which makes it more flexible and reusable.
-
-`if __name__ == "__main__":
+```
+if __name__ == "__main__":
     operationCode = int(input("Choose the operation 1 - Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division : "))
     if operationCode == 1:
         operation = Addition()
@@ -78,5 +78,5 @@ class ConsoleResultDisplayer(ResultDisplayer):
     resultDisplayer = ConsoleResultDisplayer()
     operands = inputHandler.getOperands()
     result = calculator.calculate(operands[0], operands[1])
-    resultDisplayer.displayResult(result)`
-
+    resultDisplayer.displayResult(result)
+```
