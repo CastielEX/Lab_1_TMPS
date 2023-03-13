@@ -19,12 +19,13 @@
 For this task I decided to create a simple calculator app that will follow all those principles and will be easy to implement. For an OOP language I picked Python cause is a short codding language in comparasion with Java for ex. and relative easy to learn
 
 ### SRP: The Calculator class has a single responsibility of performing mathematical operations.
-
-`class Calculator:`
-   ` def __init__(self, operation):`
-       ` self.operation = operation`
-   ` def calculate(self, x, y):`
-       ` return self.operation.operate(x, y)`
+```
+class Calculator:
+    def __init__(self, operation):
+        self.operation = operation
+    def calculate(self, x, y):
+        return self.operation.operate(x, y)
+```
         
         
 ### OCP: The mathematical operations are implemented as separate classes that implement the same interface, which allows for easy extension.
