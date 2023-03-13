@@ -38,8 +38,8 @@ class Addition(Operation):
         return x + y
         `
 ### ISP: The InputHandler and ResultDisplayer interfaces only expose the necessary methods for each operation to function correctly.
-`
-class InputHandler:
+
+`class InputHandler:
     def getOperands(self):
         pass
 
@@ -55,8 +55,8 @@ class ResultDisplayer:
 
 class ConsoleResultDisplayer(ResultDisplayer):
     def displayResult(self, result):
-        print("The result is:", result)
-        `
+        print("The result is:", result)`
+        
 ### DIP: The Calculator class depends on abstractions (Operation interface) rather than concrete implementations, which makes it more flexible and reusable.
 
 `if __name__ == "__main__":
